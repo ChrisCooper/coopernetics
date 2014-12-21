@@ -2,3 +2,7 @@ Run dev server: bundle exec jekyll serve
 Update gems: bundle update
 
 http://startbootstrap.com/template-categories/all/
+
+Blue and wood colour scheme - http://images.meredith.com/content/dam/bhg/Images/2014/2/17/101836587.jpg.rendition.largest.550.jpg
+Or pastel - http://data3.whicdn.com/images/15475546/large.jpg
+Shirt of a color: http://wwwcdn.w3layouts.com/wp-content/uploads/2013/08/elive-future.jpg?7f1e7d

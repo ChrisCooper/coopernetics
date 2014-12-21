@@ -1,19 +1,25 @@
 ---
 layout: default
-description: Chris Cooper's personal site
 ---
 
-<h1>Quixotic Chris</h1>
+<h1 class="main-title">Quixotic Chris</h1>
 
-<div>
-
-<div class="post-list">
-	<ul class="post-list-ul">
-	{% for post in site.posts %}
-		<li>
-			<a href="{{ post.url }}">{{ post.title }}</a>
-			<span class='date'>{{ post.date | date_to_long_string }}</span>
-		</li>
-	{% endfor %}
-	</ul>
-</div>
+<ul class="tile-list">
+	<li>
+		<span class="tile-title">About</span>
+		<p>I enjoy music, soccer, and especially laughter. I love to learn and teach about all things in computer science.</p>
+		<p>Currently, I'm a software engineer/general CS helper at the <a href="http://oicr.on.ca/">Ontario Institute for Cancer Research</a>.</p>
+	</li>
+	<li>
+		<span class="tile-title">Blog</span>
+	</li>
+	<li>
+		<span class="tile-title">Projects</span>
+	</li>
+	<li>
+		<span class="tile-title">Resume</span>
+	</li>
+	<li>
+		<span class="tile-title">Contact</span>
+	</li>
+</ul>

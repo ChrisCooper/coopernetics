@@ -7,3 +7,10 @@ sass:
     # Minification
 #    style: compressed # for minification
 
+
+# Site info
+domain: quixotic-chris.com
+title: Quixotic Chris
+author: Chris Cooper
+email: chris@quixotic-chris.com
+description: "This is the personal site of Chris Cooper."
