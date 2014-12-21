@@ -1,0 +1,17 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+// override the bootstrap brand-primary colour
+$brand-primary: #AAAAAA;
+
+// import bootstrap
+@import "bootstrap";
+
+// define a colour based on a bootstrap colour
+$my-gray: #999999;
+
+// remainder of sass goes here
+h1 {
+    color: $my-gray;
+}

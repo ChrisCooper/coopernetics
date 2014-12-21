@@ -1,3 +1,9 @@
 highlighter: pygments
 
 exclude: ['README.md', 'Gemfile', 'notes.txt']
+
+sass:
+    sass_dir: _sass
+    # Minification
+#    style: compressed # for minification
+
