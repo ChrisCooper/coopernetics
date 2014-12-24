@@ -33,10 +33,13 @@ $main-font: "Ubuntu",sans-serif;
  * ---- Main Sass ----
  */
 
+// Sass components
+@import "index";
+
 body {
 //	background: color position/size repeat origin clip attachment image|initial|inherit;
 	//background-color: $nice-blue;
-    background: $nice-blue url('/static/images/noisy-texture-200x200.png') repeat scroll left top;
+    background: white url('/static/images/noisy-texture-200x200.png') repeat scroll left top;
 
 	font: 300 21px $main-font;
 	color: $gray-darker;
@@ -49,16 +52,19 @@ body {
 	font-size: 51px;
 }
 
-ul.tile-list {
-	margin: 20px;
+.tile-list {
+
+	margin: 15px;
 	padding: 0px;
+
 	list-style-type: none;
 
-	li {
-		@include gradient-horizontal(rgba($nice-tan, 0.85), rgba($nice-tan, 0.0), 95%, 100%);
-		//background: rgba($nice-tan, 0.85) url('/static/images/noisy-texture-200x200.png') repeat scroll left top;
+	.tile {
 
-		padding: 10px;
+		//@include gradient-horizontal(rgba($nice-tan, 0.85), rgba($nice-tan, 0.0), 95%, 100%);
+		background: rgba($nice-blue, 0.85) url('/static/images/noisy-texture-200x200.png') repeat scroll left top;
+
+		padding: 15px;
 		margin-bottom: 15px;
 
 		.tile-title {
@@ -68,23 +74,7 @@ ul.tile-list {
 	}
 }
 
-p.definition {
-
-	.word {
-		font-family: Arial,Helvetica,sans-serif;
-		font-weight: bold;
-		margin-right: 5px;
-	}
-	.ipa {
-		font-family: Times,serif;
-	}
-	.part-of-speech {
-		font-style: italic;
-	}
-	.definition {
-		font-family: Times,serif;
-	}
-	.source {
-		font-size: 15px;
+.showem {
+	.showed {
 	}
 }
