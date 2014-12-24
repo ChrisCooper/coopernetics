@@ -75,6 +75,18 @@ body {
 }
 
 .showem {
-	.showed {
+	text-align:center;
+    margin: 50px auto; 
+
+	a {
+		margin:0px 20px;
+	    display:inline-block;
+	    text-decoration:none;
+	    color:black;
+
+	    .caption {
+	    	height: 85px;
+	    	width: 400px;
+	    }
 	}
 }
