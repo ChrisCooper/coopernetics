@@ -59,7 +59,7 @@ body {
 
 	list-style-type: none;
 
-	.tile {
+	li {
 
 		//@include gradient-horizontal(rgba($nice-tan, 0.85), rgba($nice-tan, 0.0), 95%, 100%);
 		background: rgba($nice-blue, 0.85) url('/static/images/noisy-texture-200x200.png') repeat scroll left top;
@@ -67,34 +67,33 @@ body {
 		padding: 15px;
 		margin-bottom: 15px;
 
-		.tile-title {
-			font-size: 31px;
-			font-weight: 500;
+		.row {
+			padding-top: 10px;
 		}
 	}
-}
+}	
 
-.showem {
-	text-align:center;
-    margin: 50px auto; 
+.tile-header {
 
-	a {
-		margin:0px 20px;
-	    display:inline-block;
-	    text-decoration:none;
-	    color:black;
-
-	    .caption {
-	    	height: 85px;
-	    	width: 400px;
-	    }
+	.title {
+		font-size: 31px;
+		font-weight: 500;
 	}
 }
 
+.tile-content {
+	@include make-row();
+}
 
-li.contact {
-	.contact-links a {
-		margin-left: 8%;
-		margin-right: 8%;
-	}
+.double-item {
+	@include make-md-column(6);
+}
+
+.single-item {
+	@include make-md-column(12);
+}
+
+.contact-links a {
+	margin-left: 8%;
+	margin-right: 8%;
 }
