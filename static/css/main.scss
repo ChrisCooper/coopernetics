@@ -4,7 +4,7 @@
 /*
  * ---- Bootstrap overrides ----
  */
-$brand-primary: #905A25;
+$brand-primary: darken(#905A25, 5%);
 
 // import bootstrap
 @import "bootstrap";
@@ -78,6 +78,10 @@ body {
 	.title {
 		font-size: 31px;
 		font-weight: 500;
+
+		&:hover {
+    		text-decoration: none;
+    	}
 	}
 }
 
@@ -91,6 +95,28 @@ body {
 
 .single-item {
 	@include make-md-column(12);
+}
+
+.showcase-item {
+	padding: 25px;
+
+	img {
+		@include center-block();
+		@include img-responsive();
+	}
+
+	font-size: 25px;
+	font-weight: 400;
+
+}
+
+.caption {
+	margin: 5px;
+}
+
+.special-row {
+	@include make-row();
+	background-color: lighten($nice-blue, 20%);
 }
 
 .contact-links a {

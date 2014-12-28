@@ -5,9 +5,9 @@ layout: default
 <h1 class="main-title">Quixotic Chris</h1>
 
 <ul class="tile-list">
-	<li>
+	<li id="about">
 		<div class="tile-header">
-			<span class="title">About</span>
+			<a href="#about" class="title">About</a>
 		</div>
 		<div class="tile-content">
 			<div class="single-item">
@@ -23,41 +23,45 @@ layout: default
 			</div>
 		<div>
 	</li>
-	<li>
+	<li id="blog">
 		<div class="tile-header">
-			<span class="title">Blog</span> - Thoughts and tutorials on programming, and related disciplines.
+			<a href="/blog" class="title">Blog</a> - Thoughts and tutorials on programming, and related disciplines.
 		</div>
-
 		<div class="tile-content">
-			<div class="double-item text-center">
+			<div class="double-item text-center showcase-item">
 				<a href="quixotic-chris.com/blog">
-					<img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" width="400px" height="300px">
+					<img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" alt="Chair textured in Maya"/>
 					<div class="caption">I finally textured something 3D with Maya!</div>
 				</a>
 			</div>
-			<div class="double-item text-center">
+			<div class="double-item text-center showcase-item">
 				<a href="quixotic-chris.com/blog">
-					<img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" width="400px" height="300px">
+					<img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg"  alt="Random perl code">
 					<div class="caption">Perl Literals and data structures: a guide to arrays, hashes, and references ((), [], {})</div>
 				</a>
 			</div>
 		</div>
-	</li>
-	<li>
-		<div class="tile-header">
-			<span class="title">Projects</span> - I make games, websites, and unclassified (sometimes useless) other things.
+		<div class="tile-content">
+			<div class="single-item text-center">
+				<a href="quixotic-chris.com/blog">See all posts</a>
+			</div>
 		</div>
 	</li>
-	<li>
+	<li id="projects">
 		<div class="tile-header">
-			<span class="title">Resume</span>
+			<a href="/projects" class="title">Projects</a> - I make games, websites, and unclassified (sometimes useless) other things.
+		</div>
+	</li>
+	<li id="resume">
+		<div class="tile-header">
+			<a href="#resume" class="title">Resume</a>
 			<span class="soft-eng business-cat"></span>
 			<span class="fun"></span>
 		</div>
 	</li>
-	<li>
+	<li id="contact">
 		<div class="tile-header">
-			<span class="title">Contact</span>
+			<a href="#contact" class="title">Contact</a>
 		</div>
 		<p>I currently live in Toronto! You can email me at <a href="mailto:chris@quixotic-chris.com" target="_top">chris@quixotic-chris.com</a></p>
 		<div class="tile-content">
@@ -68,7 +72,7 @@ layout: default
 				<a href="https://github.com/ChrisCooper" class="github">
 					<span class="fa fa-github fa-4x"></span>
 				</a>
-				<a href="https://twitter.com/QuixoticChris	" class="twitter">
+				<a href="https://twitter.com/QuixoticChris" class="twitter">
 					<span class="fa fa-twitter fa-4x"></span>
 				</a>
 			</div>
