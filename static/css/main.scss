@@ -4,7 +4,9 @@
 /*
  * ---- Bootstrap overrides ----
  */
-$brand-primary: darken(#905A25, 5%);
+//$brand-primary: darken(#905A25, 5%);
+//$brand-primary: #FF5900;
+$brand-primary: darken(#E95D19, 15%);
 
 // import bootstrap
 @import "bootstrap";
@@ -13,7 +15,7 @@ $brand-primary: darken(#905A25, 5%);
 /*
  * ---- Main color scheme ----
  */
-$nice-blue: #1177FF;
+$nice-blue: #1D86FF;
 //$nice-blue: #4993AC;
 $nice-dark-blue: 163648;
 $nice-wood: #E0AF86;
@@ -62,7 +64,7 @@ body {
 	li {
 
 		//@include gradient-horizontal(rgba($nice-tan, 0.85), rgba($nice-tan, 0.0), 95%, 100%);
-		background: rgba($nice-blue, 0.85) url('/static/images/noisy-texture-200x200.png') repeat scroll left top;
+		background: $nice-blue url('/static/images/noisy-texture-200x200.png') repeat scroll left top;
 
 		padding: 15px;
 		margin-bottom: 15px;
@@ -101,8 +103,10 @@ body {
 	padding: 25px;
 
 	img {
+
 		@include center-block();
 		@include img-responsive();
+		height: 280px;
 	}
 
 	font-size: 25px;

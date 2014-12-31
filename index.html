@@ -28,18 +28,8 @@ layout: default
 			<a href="/blog" class="title">Blog</a> - Thoughts and tutorials on programming, and related disciplines.
 		</div>
 		<div class="tile-content">
-			<div class="double-item text-center showcase-item">
-				<a href="quixotic-chris.com/blog">
-					<img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" alt="Chair textured in Maya"/>
-					<div class="caption">I finally textured something 3D with Maya!</div>
-				</a>
-			</div>
-			<div class="double-item text-center showcase-item">
-				<a href="quixotic-chris.com/blog">
-					<img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg"  alt="Random perl code">
-					<div class="caption">Perl Literals and data structures: a guide to arrays, hashes, and references ((), [], {})</div>
-				</a>
-			</div>
+			{% include showcase_item.html title="I finally textured something 3D with Maya!" link="quixotic-chris.com/blog" img="/static/images/posts/maya-chair-4x3.png" alt="Chair textured in Maya"%}
+			{% include showcase_item.html title="Perl Literals and data structures: a guide to arrays, hashes, and references ((), [], {})" link="/2014/01/22/perl-literals-data-structures-giude-arrays-hashes-references.html" img="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" alt="Random perl code" %}
 		</div>
 		<div class="tile-content">
 			<div class="single-item text-center">
@@ -50,6 +40,15 @@ layout: default
 	<li id="projects">
 		<div class="tile-header">
 			<a href="/projects" class="title">Projects</a> - I make games, websites, and unclassified (sometimes useless) other things.
+		</div>
+		<div class="tile-content">
+			{% include showcase_item.html title="Qcumber.ca - Queen's Course Catalog" link="quixotic-chris.com/blog" img="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" alt="Chair textured in Maya" %}
+			{% include showcase_item.html title="SPQR - City building game" link="quixotic-chris.com/blog" img="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" alt="Qcumber example page" %}
+		</div>	
+		<div class="tile-content">
+			<div class="single-item text-center">
+				<a href="quixotic-chris.com/projects">See all projects</a>
+			</div>
 		</div>
 	</li>
 	<li id="resume">
