@@ -9,13 +9,15 @@ layout: default
 	{% endif %}
 
 	{% if page.date %}
-	<div class="post-date">
-	  {{ page.date | date:"%B %e, %Y" }}
-	</div>
+		<div class="post-date">
+		  {{ page.date | date:"%B %e, %Y" }}
+		</div>
 	{% endif %}
 
 	<div class="post">
-	{{ content }}
+		{{ content }}
+
+		{% include disqus_comment_section.html %}
 	</div>
 
 </div>

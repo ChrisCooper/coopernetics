@@ -115,7 +115,7 @@ body {
 
 }
 
-.caption {
+.showcase-link {
 	margin: 5px;
 }
 
@@ -131,7 +131,7 @@ body {
 
 .wrapper {
 	background-color: white;
-	padding: 10px 50px;
+	padding: 10px 8%;
 
 	p {
 		margin-top: 10px;
@@ -147,4 +147,11 @@ body {
 
 .post-date {
 	color: $faded-text;
+}
+
+.caption {
+	margin: 5px;
+	@include center-block();
+	font-style: italic;
+	font-size: 18px;
 }

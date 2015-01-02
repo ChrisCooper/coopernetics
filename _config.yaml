@@ -14,3 +14,9 @@ title: Quixotic Chris
 author: Chris Cooper
 email: chris@quixotic-chris.com
 description: "This is the personal site of Chris Cooper."
+
+google_analytics:
+    account: UA-47363412-1
+
+disqus:
+    id: jamiewong
