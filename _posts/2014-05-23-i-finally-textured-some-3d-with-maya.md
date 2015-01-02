@@ -1,6 +1,9 @@
 ---
 layout: post
 title: I finally textured something 3D with Maya!
+tags:
+- 3D
+- milestones
 status: publish
 type: post
 published: true
