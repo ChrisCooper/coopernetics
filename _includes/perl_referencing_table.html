@@ -1,1 +1,32 @@
-<h3>table goes here</h3>
+<table class="table table-striped">
+	<tr>
+		<th>Data type</th>
+		<th>Sigil format</th>
+		<th>Literal form</th>
+		<th>Accessing elements</th>
+	</tr>
+	<tr>
+		<td>Array</td>
+		<td>@my_array</td>
+		<td>('Timmy', 'Carl')</td>
+		<td>$my_array[0]</td>
+	</tr>
+	<tr>
+		<td>Hash</td>
+		<td>%my_hash</td>
+		<td>('House' => 'red')</td>
+		<td>$my_hash{'house'}</td>
+	</tr>
+	<tr>
+		<td>Arrayref</td>
+		<td>$my_arrayref</td>
+		<td>['Timmy', 'Carl']</td>
+		<td>$my_arrayref->[0]</td>
+	</tr>
+	<tr>
+		<td>Hashref</td>
+		<td>$my_hashref</td>
+		<td>{'House' => 'red'}</td>
+		<td>$my_hashref->{'House'}</td>
+	</tr>
+</table>

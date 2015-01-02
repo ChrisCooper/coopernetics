@@ -1,0 +1,112 @@
+
+// Background
+$py-background: #222728;
+
+// Body text, default code, primary content
+$py-text: #93a1a1;
+
+// Comments, secondary content
+$py-comments: #586e75;
+
+// Constants
+$py-constants: #cb4b16;
+
+// Regular expressions, special keywords
+$py-regex: #dc322f;
+
+//Reserved keywords
+$py-keywords: #268bd2;
+
+// Strings, numbers
+$py-strings: #2aa198;
+
+// Operators, other keywords
+$py-operators: #859900;
+
+// Builtins
+$py-builtins: #B58900;
+
+
+code, pre {
+	font-family: Consolas,"Liberation Mono", Menlo, Courier, monospace;
+}
+
+pre {
+	background-color: $py-background;
+	font-size: 16px;
+}
+
+.highlight {
+	background-color: $py-background;
+	color: $py-text;
+
+	.lineno { color: $py-comments } // Line Numbers
+	.c { color: $py-comments } // Comment
+	.err { color: $py-text } // Error
+	.g { color: $py-text } // Generic
+	.k { color: $py-operators } // Keyword
+	.l { color: $py-text } // Literal
+	.n { color: $py-text } // Name
+	.o { color: $py-operators } // Operator
+	.x { color: $py-constants } // Other
+	.p { color: $py-text } // Punctuation
+	.cm { color: $py-comments } // Comment.Multiline
+	.cp { color: $py-operators } // Comment.Preproc
+	.c1 { color: $py-comments } // Comment.Single
+	.cs { color: $py-operators } // Comment.Special
+	.gd { color: $py-strings } // Generic.Deleted
+	.ge { color: $py-text; font-style: italic } // Generic.Emph
+	.gr { color: $py-regex } // Generic.Error
+	.gh { color: $py-constants } // Generic.Heading
+	.gi { color: $py-operators } // Generic.Inserted
+	.go { color: $py-text } // Generic.Output
+	.gp { color: $py-text } // Generic.Prompt
+	.gs { color: $py-text; font-weight: bold } // Generic.Strong
+	.gu { color: $py-constants } // Generic.Subheading
+	.gt { color: $py-text } // Generic.Traceback
+	.kc { color: $py-constants } // Keyword.Constant
+	.kd { color: $py-keywords } // Keyword.Declaration
+	.kn { color: $py-operators } // Keyword.Namespace
+	.kp { color: $py-operators } // Keyword.Pseudo
+	.kr { color: $py-keywords } // Keyword.Reserved
+	.kt { color: $py-regex } // Keyword.Type
+	.ld { color: $py-text } // Literal.Date
+	.m { color: $py-strings } // Literal.Number
+	.s { color: $py-strings } // Literal.String
+	.na { color: $py-text } // Name.Attribute
+	.nb { color: $py-builtins } // Name.Builtin
+	.nc { color: $py-keywords } // Name.Class
+	.no { color: $py-constants } // Name.Constant
+	.nd { color: $py-keywords } // Name.Decorator
+	.ni { color: $py-constants } // Name.Entity
+	.ne { color: $py-constants } // Name.Exception
+	.nf { color: $py-keywords } // Name.Function
+	.nl { color: $py-text } // Name.Label
+	.nn { color: $py-text } // Name.Namespace
+	.nx { color: $py-text } // Name.Other
+	.py { color: $py-text } // Name.Property
+	.nt { color: $py-keywords } // Name.Tag
+	.nv { color: $py-keywords } // Name.Variable
+	.ow { color: $py-operators } // Operator.Word
+	.w { color: $py-text } // Text.Whitespace
+	.mf { color: $py-strings } // Literal.Number.Float
+	.mh { color: $py-strings } // Literal.Number.Hex
+	.mi { color: $py-strings } // Literal.Number.Integer
+	.mo { color: $py-strings } // Literal.Number.Oct
+	.sb { color: $py-comments } // Literal.String.Backtick
+	.sc { color: $py-strings } // Literal.String.Char
+	.sd { color: $py-text } // Literal.String.Doc
+	.s2 { color: $py-strings } // Literal.String.Double
+	.se { color: $py-constants } // Literal.String.Escape
+	.sh { color: $py-text } // Literal.String.Heredoc
+	.si { color: $py-strings } // Literal.String.Interpol
+	.sx { color: $py-strings } // Literal.String.Other
+	.sr { color: $py-regex } // Literal.String.Regex
+	.s1 { color: $py-strings } // Literal.String.Single
+	.ss { color: $py-strings } // Literal.String.Symbol
+	.bp { color: $py-keywords } // Name.Builtin.Pseudo
+	.vc { color: $py-keywords } // Name.Variable.Class
+	.vg { color: $py-keywords } // Name.Variable.Global
+	.vi { color: $py-keywords } // Name.Variable.Instance
+	.il { color: $py-strings } // Literal.Number.Integer.Long
+}

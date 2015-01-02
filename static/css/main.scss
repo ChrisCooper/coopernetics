@@ -6,23 +6,19 @@
  */
 //$brand-primary: darken(#905A25, 5%);
 //$brand-primary: #FF5900;
-$brand-primary: darken(#E95D19, 15%);
+$background-blue: #1D86FF;
+$brand-primary: darken($background-blue, 15%);
+$brand-secondary: darken(#E95D19, 15%);
 
 // import bootstrap
 @import "bootstrap";
 
+// import pygments color scheme
+@import "pygments-scheme";
 
-/*
- * ---- Main color scheme ----
- */
-$nice-blue: #1D86FF;
-//$nice-blue: #4993AC;
-$nice-dark-blue: 163648;
-$nice-wood: #E0AF86;
-$nice-dark-wood: $brand-primary;
-$nice-tan: #E8C1A0;
-$nice-dark-gray: #111111;
-
+@mixin blue-background() {
+	background: $background-blue url('/static/images/noisy-texture-200x200.png') repeat scroll left top;
+}
 
 /*
  * ---- Fonts ----
@@ -40,18 +36,24 @@ $main-font: "Ubuntu",sans-serif;
 
 body {
 //	background: color position/size repeat origin clip attachment image|initial|inherit;
-	//background-color: $nice-blue;
-    background: white url('/static/images/noisy-texture-200x200.png') repeat scroll left top;
+	//background-color: $brand-primary;
+
+    @include blue-background();
 
 	font: 300 21px $main-font;
 	color: $gray-darker;
 	text-shadow: 0px 1px 2px rgba(40, 40, 40, 0.5);
 }
 
+#content {
+	padding: 0px;
+}
+
 .main-title {
 	margin: 15px;
 	padding: 5px;
 	font-size: 51px;
+	font-weight: 500;
 }
 
 .tile-list {
@@ -61,11 +63,11 @@ body {
 
 	list-style-type: none;
 
+
 	li {
 
-		//@include gradient-horizontal(rgba($nice-tan, 0.85), rgba($nice-tan, 0.0), 95%, 100%);
-		background: $nice-blue url('/static/images/noisy-texture-200x200.png') repeat scroll left top;
-
+		background: white url('/static/images/noisy-texture-200x200.png') repeat scroll left top;
+		
 		padding: 15px;
 		margin-bottom: 15px;
 
@@ -120,10 +122,20 @@ body {
 
 .special-row {
 	@include make-row();
-	background-color: lighten($nice-blue, 20%);
+	background-color: lighten($brand-primary, 20%);
 }
 
 .contact-links a {
 	margin-left: 8%;
 	margin-right: 8%;
+}
+
+.wrapper {
+	background-color: white;
+	padding: 10px 50px;
+
+	p {
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
 }

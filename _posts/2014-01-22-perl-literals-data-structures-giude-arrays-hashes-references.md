@@ -24,8 +24,6 @@ my @animal_sounds = (@cats, @dogs);
 ('meow', 'purr', 'pounce', 'bark', 'drool')
 {% endhighlight %}
 
-Array and Hash squishing
-
 This combined array discards all separation between the two halves, and even the original type of those halves. If they had been hashes, the `@animal_sounds` array would be *identical*. Following that train of smooth-if-occasionally-unwanted conversions, the full `@animal_sounds` array is also completely interchangeable with a hash. Perl won't complain at all when you make a hash version of it.
 
 {% highlight perl %}
@@ -35,7 +33,7 @@ my %unsound_mappings = @animal_sounds;
 ('meow' => 'purr', 'pounce' => 'bark', 'drool' => undef)
 {% endhighlight %}
 
-Alternating elements are combined into key-value pairs. Notice how the odd number of elements results in that last `'run' =&gt; undef` mapping? Yay!
+Alternating elements are combined into key-value pairs. Notice how the odd number of elements results in that last `'run' => undef` mapping? Yay!
 
 This array-hash shape-shifting feature is occasionally useful, but I find it tends to result in slightly confusing code. I like dumb code. Regardless, I also enjoy nesting...
 
