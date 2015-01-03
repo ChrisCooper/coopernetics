@@ -16,3 +16,7 @@ http://rileyjshaw.com/
 http://www.kortaggio.com/
 http://www.pawelkaim.com/
 http://michal.karzynski.pl/
+
+code and content wrapperhttp://gameprogrammingpatterns.com/command.html
+full-width: http://demo.hackerthemes.com/tales/html-version/v2-1-survey/
+navbar: http://templateninja.net/themes/mypersonal/
