@@ -9,14 +9,24 @@ sass:
 
 
 # Site info
-domain: quixotic-chris.com
+#domain: quixotic-chris.com
+#domain: localhost:4000
+domain: ChrisCooper.github.io
 title: Quixotic Chris
 author: Chris Cooper
 email: chris@quixotic-chris.com
-description: "This is the personal site of Chris Cooper."
+description155: "This is the personal site of Chris Cooper, an aspiring computer scientist and soccer player who lives in Toronto."
+main_square_image_url: /static/images/quixotic-chris.png
 
 google_analytics:
     account: UA-47363412-1
 
+google_plus:
+    profile_url: "https://plus.google.com/115846485176399836261"
+
 disqus:
     account: quixotic-chris
+
+facebook:
+    insights_id: unknown
+

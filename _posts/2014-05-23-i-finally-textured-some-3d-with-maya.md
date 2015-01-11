@@ -1,12 +1,15 @@
 ---
 layout: post
 title: I finally textured something 3D with Maya!
+description155: "My first ever UV mapped and textured 3D model with Maya. This opens a world of possibilities!" 
+search_title70: "3D UV texturing in Maya: My first \"success\"!"
 tags:
-- 3D
-- milestones
-status: publish
+    - 3D
+    - milestones
+    - games
 type: post
 published: true
+main_square_image_url: /static/images/posts/maya-chair-4x3.png
 ---
 
 I did a lot of 3D modelling and animation growing up, with Maya's Personal Learning Edition. It was a TON of fun, though looking back I'm sure my methods were quite primitive. I came out of it with some fun skills though, and [even a show reel](https://www.youtube.com/watch?v=5eBPNgupFGo). (Yep, it comes complete with a "Clubbed To Death" soundtrack from The Matrix. Thanks, teenager Chris. ;) )

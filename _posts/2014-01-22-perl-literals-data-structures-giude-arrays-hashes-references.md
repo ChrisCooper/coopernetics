@@ -1,18 +1,21 @@
 ---
 layout: post
 title: "Perl Literals and data structures: a guide to arrays, hashes, and references ((), [], {})"
+description155: "Avoid the common mistakes with perl data structures, understand a more subtle behaviour, and safely nest { 'all' => { 'your' => 'data' } }."
+search_title70: "Literals (), [], {} and data structures in Perl"
 tags:
-- tutorials
-- perl
-status: publish
+    - tutorials
+    - perl
+    - programming
 type: post
 published: true
+main_square_image_url: /static/images/posts/perl-snippet.png
 ---
 
 Perl is not an easy language to get your head around sometimes. It's simple on the surface, with only a few data types to learn, but subtle behaviours abound, and learning them up-front can save painful hours.
 
 One troublesome point is how Perl handles nested arrays and hashes. Perl, in contrast to languages like Python and JavaScript, likes to squish data structures together and treat them as a single continuous unit:
-
+w
 {% highlight perl %}
 my @cats = ('meow', 'purr', 'pounce');
 my @dogs = ('bark', 'drool');
@@ -56,8 +59,6 @@ my $animal_sounds = [$cats, $dogs];
 # Perfect. This is the resulting $animal_sounds:
 [['meow', 'purr', 'pounce'], ['bark', 'drool']]
 {% endhighlight %}
-
-Array and Hash squishing
 
 To access an element of this data structure, just use the syntax from the syntax table above. For example, to print "pounce":
 

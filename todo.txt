@@ -1,0 +1,1 @@
+Claim domain for facebook insights: https://developers.facebook.com/docs/platforminsights/domains
