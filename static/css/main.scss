@@ -4,6 +4,7 @@
 
 
 $background-blue: lighten(#1D86FF, 10%);
+$background-blue: lighten(#268FE0, 10%);
 $brand-primary: darken($background-blue, 30%);
 $brand-secondary: darken(#E95D19, 15%);
 
@@ -16,7 +17,7 @@ $faded-text: #A0A0A0;
 @import "pygments-scheme";
 
 @mixin blue-background() {
-	background: $background-blue url('/static/images/noisy-texture-200x200.png') repeat scroll left top;
+	background: $background-blue url('/static/images/noisy-texture2-400x400.png') repeat scroll left top;
 }
 
 /*
@@ -24,7 +25,7 @@ $faded-text: #A0A0A0;
  */
 //$main-font: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
 $main-font: "Ubuntu",sans-serif;
-//$main-font: "Open Sans",verdana,arial,sans-serif;
+//$main-font: "Open Sans",verdana,arial,sans-s26iF;
 
 /*
  * ---- Main Sass ----
