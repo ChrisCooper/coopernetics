@@ -37,9 +37,14 @@ $main-font: "Ubuntu",sans-serif;
 body {
     @include blue-background();
 
+	font: 300 18px $main-font;
+	//color: $gray-darker;
+}
+
+.index-page {
 	font: 300 21px $main-font;
 	//color: $gray-darker;
-	text-shadow: 0px 1px 1px rgba(40, 40, 40, 0.5);
+	text-shadow: 0px 1px 1px rgba(40, 40, 40, 0.5);	
 }
 
 #content {
