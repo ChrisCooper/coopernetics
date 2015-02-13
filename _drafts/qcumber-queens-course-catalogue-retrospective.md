@@ -10,6 +10,7 @@ tags:
 type: post
 published: true
 main_square_image_url: /static/images/posts/qcumber/logo.png
+main_square_image_alt: "Qcumber logo"
 ---
 
 Qcumber is a simple, accessible course catalog for Queen’s University students. Creating its original incarnation and sharing was a wonderful experience, but since I've been out of Queen’s for 18 months, this post will help me relinquish it to future students (especially those who are continuing to maintain and improve it).

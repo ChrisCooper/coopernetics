@@ -10,6 +10,7 @@ tags:
 type: post
 published: true
 main_square_image_url: /static/images/posts/perl-snippet.png
+main_square_image_alt: Random perl code
 ---
 
 Perl is not an easy language to get your head around sometimes. It's simple on the surface, with only a few data types to learn, but subtle behaviours abound, and learning them up-front can save painful hours.

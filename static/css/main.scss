@@ -166,3 +166,43 @@ body {
 	padding-left: 5%;
 	padding-right: 5%;
 }
+
+
+.solo-title {
+	margin-bottom: 25px;
+}
+
+// Blog list page 
+
+.post-list {
+	list-style-type: none;
+	padding-left: 0;
+
+	li {
+		@include make-row();
+		margin-bottom: 15px;
+	}
+}
+
+.blog-list-thumbnail {
+	@include img-responsive(inline);
+}
+
+.blog-thumb-container {
+	//max-width: 140px;
+	//display: inline-block;
+	@include make-md-column(2);
+	margin-bottom: 10px;
+}
+
+.blog-title-container {
+	//display: inline-block;
+	@include make-md-column(10);
+
+	a {
+		font-size: 28px;
+	}
+	.date {
+		color: $faded-text;
+	}
+}
