@@ -28,7 +28,8 @@ $py-builtins: #B58900;
 
 
 code, pre {
-	font-family: Consolas,"Liberation Mono", Menlo, Courier, monospace;
+	//font-family: Consolas,"Liberation Mono", Menlo, Courier, monospace;
+	font-family: $font-family-monospace;
 }
 
 pre {
