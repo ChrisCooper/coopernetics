@@ -9,8 +9,6 @@ sass:
 
 
 # Site info
-#domain: quixotic-chris.com
-#domain: localhost:4000
 domain: www.quixotic-chris.com
 title: Quixotic Chris
 author: Chris Cooper
