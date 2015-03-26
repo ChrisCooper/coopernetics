@@ -22,31 +22,39 @@ permalink: /
 			</div>
 		<div>
 	</li>
+
+	<!--
+	<li id="projects">
+		<div class="tile-header">
+			<a href="#projects" class="title">Projects</a> - I make games, websites, and unclassified other things.
+		</div>
+		<div class="tile-content">
+			{% include showcase_item.html title="Qcumber.ca - Queen's Course Catalog" link="#projects" img="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" alt="Qcumber screenshot" %}
+
+			{% include showcase_item.html title="SPQR - City building game" link="#projects" img="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" alt="SPQR screenshot" %}
+		</div>	
+		<div class="tile-content">
+			<div class="single-item text-center">
+				<a href="/projects">See all projects</a>
+			</div>
+		</div>
+	</li>
+	-->
+	
 	<li id="blog">
 		<div class="tile-header">
 			<a href="/blog" class="title">Blog</a> - Thoughts and tutorials on programming, and related disciplines.
 		</div>
 		<div class="tile-content">
-			{% include showcase_item.html title="I finally textured something 3D with Maya!" link="/2014/05/23/i-finally-textured-some-3d-with-maya.html" img="/static/images/posts/maya-chair-4x3.png" alt="Chair textured in Maya"%}
-			{% include showcase_item.html title="Perl Literals and data structures: a guide to arrays, hashes, and references ((), [], {})" link="/2014/01/22/perl-literals-data-structures-giude-arrays-hashes-references.html" img="/static/images/posts/perl-snippet.png" alt="Random perl code" %}
+			{% for post in site.posts limit 2 %}
+				{% if post.is_featured %}
+					{% include showcase_item.html post=post %}
+				{% endif %}
+		    {% endfor %}
 		</div>
 		<div class="tile-content">
 			<div class="single-item text-center">
 				<a href="/blog">See all posts</a>
-			</div>
-		</div>
-	</li>
-	<li id="projects">
-		<div class="tile-header">
-			<a href="/projects" class="title">Projects</a> - I make games, websites, and unclassified other things.
-		</div>
-		<div class="tile-content">
-			{% include showcase_item.html title="Qcumber.ca - Queen's Course Catalog" link="/blog" img="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" alt="Qcumber screenshot" %}
-			{% include showcase_item.html title="SPQR - City building game" link="/blog" img="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" alt="SPQR screenshot" %}
-		</div>	
-		<div class="tile-content">
-			<div class="single-item text-center">
-				<a href="/projects">See all projects</a>
 			</div>
 		</div>
 	</li>
@@ -61,10 +69,10 @@ permalink: /
 		<div class="tile-header">
 			<a href="#contact" class="title">Contact</a>
 		</div>
-		<p>I currently live in Toronto! You can email me at <a href="mailto:chris@quixotic-chris.com" target="_top">chris@quixotic-chris.com</a></p>
+		<p>I currently live in Toronto! You can email me at <a href="mailto:{{ site.email }}" target="_top">{{ site.email }}</a></p>
 		<div class="tile-content">
 			<div class="single-item text-center contact-links">
-				<a href="mailto:chris@quixotic-chris.com" class="email">
+				<a href="mailto:{{ site.email }}" class="email">
 					<span class="fa fa-envelope fa-4x"></span>
 				</a>
 				<a href="https://github.com/ChrisCooper" class="github">

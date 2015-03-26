@@ -1,6 +1,7 @@
 ---	
 layout: post
-title: "Qcumber (Queen's course catalogue): A Retrospective"
+#title: "Qcumber (Queen's course catalogue): A Retrospective"
+title: "Qcumber Retrospective"
 description155: "Qcumber is an unofficial course catalogue for Queen's University, created to fill the severe absence of course-finding tools. It was launched in 2012."
 search_title70: "The Qcumber Course Catalogue: A Retrospective"
 tags:
@@ -11,11 +12,12 @@ type: post
 published: true
 main_square_image_url: /static/images/posts/qcumber/logo.png
 main_square_image_alt: "Qcumber logo"
+is_featured: true
 ---
 
-Qcumber is a simple, accessible course catalog for Queen’s University students. Creating its original incarnation and sharing it was a wonderful experience, but since I've been out of Queen’s for more than 18 months, this post will help me relinquish it to future students (especially those who are continuing to maintain and improve it).
+[Qcumber](http://qcumber.ca) is a simple, accessible course catalog for Queen’s University students. Creating its original incarnation and [sharing](https://github.com/ChrisCooper/QcumberD) it was a wonderful experience, but since I've been out of Queen’s for more than 18 months, this post will help me relinquish it to future students (especially those who are continuing to maintain and improve it).
 
-The impact and progress made with the site has been exciting to witness; it has grown to involve eight direct contributors, and recently surpassed the 1,000,000 pageview mark! Qcumber was the first complete website I ever developed, and I regard it as a great success in utility and personal learning. Its current state is the result of many people's work, so I encourage you to read the acknowledgements section. :)
+The impact and progress made with the site has been exciting to witness; it has grown to involve eight direct contributors, and recently surpassed 1,000,000 pageviews! Qcumber was the first complete website I ever developed, and I regard it as a great success in utility and personal learning. Its current state is the culmination of many people's work, so I encourage you to read the acknowledgements section. :)
 
 {% include captioned_image.html src="/static/images/posts/qcumber/home.png" caption="Qcumber's homepage at the time of this post" cls="inline-padded" %}
 
@@ -33,7 +35,7 @@ Thanks to Qcumber, there exists a single page with description, prerequisite, an
 
 {% include captioned_image.html src="/static/images/posts/qcumber/course-page.png" caption="A typical course page" cls="inline-padded" %}
 
-Since launch, the team (please see acknowledgemnts at the bottom) have added some extra features to make things even better. These include:
+Since launch, the team (please see acknowledgements at the bottom) have added some extra features to make things even better. These include:
 
 - instant term filters
 - links to textbooks and past exams

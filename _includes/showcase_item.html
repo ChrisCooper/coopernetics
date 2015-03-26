@@ -1,6 +1,6 @@
 <div class="double-item text-center showcase-item">
-	<a href="{{ include.link }}">
-		<img src="{{ include.img }}" alt="{{ include.alt }}"/>
-		<div class="showcase-link">{{ include.title }}</div>
+	<a href="{{ include.post.url }}">
+		<img src="{{ include.post.main_square_image_url }}" alt="{{ include.post.main_square_image_alt }}"/>
+		<div class="showcase-link">{{ include.post.title }}</div>
 	</a>
 </div>
