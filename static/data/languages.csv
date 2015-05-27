@@ -1,15 +1,15 @@
-Name,Type,Familiarity,Depth of experience,Desire to use again
-Python,language,8,6,4
-C,language,7,5,1.5
-Objective-C,language,6.5,5,2.5
-Perl,language,5.5,5,-1
-SQL,language,5,4,3
-C#,language,4.5,2,5
-JavaScript,language,4,3,2
-Java,language,3.75,4,0.5
-Scala,language,4.75,4,4
-C++,language,3.5,3,1
-Haskell,language,3.25,3,5
-Swift,language,3,3,4
-R,language,2.5,2,1
-PHP,language,2,3,-2
+Name,Type,Familiarity,Depth of experience,Desire to use again,image_url
+Python,language,8,6,4,/static/images/logos/python-100-100.png
+C,language,7,5,1.5,
+Objective-C,language,6.5,5,2.5,
+Perl,language,5.5,5,-1,
+SQL,language,5,4,3.5,
+C#,language,4.5,2,5,
+JavaScript,language,4,3,3,
+Java,language,3.75,4,0.5,
+Scala,language,4.75,4,4,
+C++,language,3.5,3,1,
+Haskell,language,3.25,3,5,
+Swift,language,3,3,4,
+R,language,2.5,2,1,
+PHP,language,2,3,-2,
