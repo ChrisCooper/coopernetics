@@ -18,15 +18,19 @@ var margin = {top: 20, right: 20, bottom: 30, left: 40},
  * axis - sets up axis
  */ 
 
-// setup x 
-var xProperty = "Desire to use again";
+var image_root = "/static/images/logos/";
+
+// setup x
+//var xProperty = "Desire to use again";
+var xProperty = "Familiarity";
 var xValue = function(d) { return d[xProperty];}, // data -> value
     xScale = d3.scale.linear().range([0, width]), // value -> display
     xMap = function(d) { return xScale(xValue(d));}, // data -> display
     xAxis = d3.svg.axis().scale(xScale).orient("bottom");
 
 // setup y
-var yProperty = "Familiarity";
+//var yProperty = "Familiarity";
+var yProperty = "Desire to use again";
 var yValue = function(d) { return d[yProperty];}, // data -> value
     yScale = d3.scale.linear().range([height, 0]), // value -> display
     yMap = function(d) { return yScale(yValue(d));}, // data -> display
@@ -98,8 +102,8 @@ d3.csv("/static/data/languages.csv", function(error, data) {
     .enter().append("image")
       .attr("class", "dot")
       .attr("x", xMap)
-      .attr("cy", yMap)
-      .attr("xlink:href", function(d) { return d.image_url;})
+      .attr("y", yMap)
+      .attr("xlink:href", function(d) { return image_root + d.image_url;})
       .attr("width", "50px")
       .attr("height", "50px")
       .on("mouseover", function(d) {
