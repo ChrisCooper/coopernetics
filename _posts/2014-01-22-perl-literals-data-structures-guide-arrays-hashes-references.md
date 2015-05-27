@@ -38,7 +38,7 @@ my %unsound_mappings = @animal_sounds;
 ('meow' => 'purr', 'pounce' => 'bark', 'drool' => undef)
 {% endhighlight %}
 
-Alternating elements are combined into key-value pairs. Notice how the odd number of elements results in that last `'run' => undef` mapping? Yay!
+Alternating elements are combined into key-value pairs. Notice how the odd number of elements results in that last `'drool' => undef` mapping? Yay!
 
 This array-hash shape-shifting feature is occasionally useful, but I find it tends to result in slightly confusing code. I like dumb code. Regardless, I also enjoy nesting...
 
