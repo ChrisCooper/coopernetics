@@ -3,7 +3,7 @@
 		"name": "Qcumber",
 		"source_url": "https://github.com/ChrisCooper/QcumberD",
 	    "live_url": "http://qcumber.ca",
-	    "overall_rating": 85
+	    "overall_rating": 85,
 	    "technology_ratings": [
 	        {"python": 40},
 	        {"django": 50},
