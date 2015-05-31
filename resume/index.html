@@ -7,9 +7,18 @@ extra_css:
 ---
 
 <script>
-var margin = {top: 20, right: 20, bottom: 30, left: 40},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+
+var margin = {top: 20, left: 20, bottom: 30, right: 10};
+var container = d3.select('div.wrapper');
+var container_full_width = parseInt(container.style('width'));
+var full_width = container_full_width - parseInt(container.style('margin-left')) - parseInt(container.style('padding-right'));
+console.log(container.style('padding-right'));
+var width = full_width - margin.left - margin.right;
+var aspectRatio = 1.9;
+
+/** Width-dependant variables **/
+var logo_width = width / 16;
+var height = width / aspectRatio;
 
 /* 
  * value accessor - returns the value to encode for a given data object.
@@ -42,6 +51,7 @@ var cValue = function(d) { return d.Type;},
 
 // add the graph canvas to the body of the webpage
 var svg = d3.select("div.wrapper").append("svg")
+	.attr("id", "languages-graph")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
@@ -104,8 +114,8 @@ d3.csv("/static/data/languages.csv", function(error, data) {
       .attr("x", xMap)
       .attr("y", yMap)
       .attr("xlink:href", function(d) { return image_root + d.image_url;})
-      .attr("width", "50px")
-      .attr("height", "50px")
+      .attr("width", logo_width+"px")
+      .attr("height", logo_width+"px")
       .on("mouseover", function(d) {
           tooltip.transition()
                .duration(200)
