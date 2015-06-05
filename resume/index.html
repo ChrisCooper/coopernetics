@@ -10,6 +10,50 @@ extra_css:
   <input class="filter" type="text" placeholder="Projects and Skills, e.g. 'Python'">
 </div>
 
-<script>
+<script type="text/jsx">
+
+var all_projects = {{ site.data.projects | jsonify }};
+
+var ProjectList = React.createClass({
+    getInitialState: function () {
+        return {projects: this.props.allProjects};
+    },
+    filterWithText: function (filter_text) {
+      var fake_projects = [{"name": "Project with " + filter_text}];
+      this.setState({projects: fake_projects});
+    },
+    render: function () {
+        var nodes = this.state.projects.map(function (proj) {
+            return (
+                <ProjectOverview project={proj}>
+                </ProjectOverview>
+            );
+        });
+        return (
+            <div className="projectList">
+                {nodes}
+            </div>
+        );
+    }
+});
+
+
+var ProjectOverview = React.createClass({
+    render: function () {
+        return (
+            <div className="ProjectOverview">
+                <h2 className="title">
+                    <a href={this.props.project.url}>{this.props.project.name}</a>
+                </h2>
+            </div>
+        );
+    }
+});
+
+// React init and display all projects
+React.render(
+  <ProjectList allProjects={all_projects} />,
+  $("div.wrapper")[0]
+);
 
 </script>

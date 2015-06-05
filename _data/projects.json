@@ -1,14 +1,22 @@
 [
-	{
-		"name": "Qcumber",
-		"source_url": "https://github.com/ChrisCooper/QcumberD",
-	    "live_url": "http://qcumber.ca",
-	    "overall_rating": 85,
-	    "technology_ratings": [
-	        {"python": 40},
-	        {"django": 50},
-	        {"postgresql": 10},
-	        {"twitter-bootstrap": 25}
-        ]
+    {
+        "name": "Qcumber",
+        "skills": {
+          "Python": 65,
+          "Django": 75
+        },
+        "brief": "Qcumber is a simple, accessible course catalog for Queen’s University students.",
+        "source": "https://github.com/ChrisCooper/QcumberD",
+        "url": "http://qcumber.ca/"
+    },
+    {
+        "name": "Quixotic-Chris.com",
+        "skills": {
+          "Jekyll": 65,
+          "HTML": 45
+        },
+        "brief": "Quixotic-Chris.com is my homepage, blog, and portfolio site.",
+        "source": "https://github.com/ChrisCooper/ChrisCooper.github.io",
+        "url": "http://www.quixotic-chris.com/"
     }
 ]
