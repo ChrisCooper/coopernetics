@@ -3,7 +3,12 @@
         "name": "Qcumber",
         "skills": {
           "Python": 65,
-          "Django": 75
+          "Django": 75,
+          "Twitter-Bootstrap": 34,
+          "HTML": 36,
+          "Less": 35,
+          "PostgreSQL": 15,
+          "jQuery": 14
         },
         "brief": "Qcumber is a simple, accessible course catalog for Queen’s University students.",
         "source": "https://github.com/ChrisCooper/QcumberD",
@@ -13,7 +18,10 @@
         "name": "Quixotic-Chris.com",
         "skills": {
           "Jekyll": 65,
-          "HTML": 45
+          "HTML": 45,
+          "Twitter-Bootstrap": 55,
+          "Sass": 45,
+          "React": 56
         },
         "brief": "Quixotic-Chris.com is my homepage, blog, and portfolio site.",
         "source": "https://github.com/ChrisCooper/ChrisCooper.github.io",

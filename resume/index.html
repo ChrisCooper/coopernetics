@@ -52,9 +52,10 @@ var ProjectOverview = React.createClass({
         skill_names.sort(skillComparator(proj.skills));
 
         var skill_tags = skill_names.map(function (skill_name) {
-          var style = {opacity: proj.skills[skill_name]/100.0};
+          // Scale the opacity by usage rating
+          var style = {opacity: (proj.skills[skill_name]/80.0) + 0.2};
             return (
-                <span style={style} className="skill-tag">{skill_name}</span>
+                <a href="#" style={style} className="skill-tag">{skill_name}</a>
             );
         });
 
