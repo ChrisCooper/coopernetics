@@ -7,7 +7,7 @@
         },
         "brief": "Qcumber is a simple, accessible course catalog for Queen’s University students.",
         "source": "https://github.com/ChrisCooper/QcumberD",
-        "url": "http://qcumber.ca/"
+        "live_url": "http://qcumber.ca/"
     },
     {
         "name": "Quixotic-Chris.com",
@@ -17,6 +17,16 @@
         },
         "brief": "Quixotic-Chris.com is my homepage, blog, and portfolio site.",
         "source": "https://github.com/ChrisCooper/ChrisCooper.github.io",
-        "url": "http://www.quixotic-chris.com/"
+        "live_url": "http://www.quixotic-chris.com/"
+    },
+    {
+        "name": "Chaotic Mind",
+        "skills": {
+          "C#": 65,
+          "XNA": 40
+        },
+        "brief": "Chaotic Mind is a top-down shooter set in a shape-shifting maze.",
+        "source": "https://github.com/ChrisCooper/ChaoticMind",
+        "video": "https://www.youtube.com/watch?v=boIDvoeGzjA"
     }
 ]
