@@ -38,3 +38,7 @@
 	@include label-variant($brand-primary);
 	margin-right: 2px;
 }
+
+.filter-checks label {
+	@extend .checkbox-inline;
+}
