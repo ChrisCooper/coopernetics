@@ -12,7 +12,8 @@
         },
         "brief": "Qcumber is a simple, accessible course catalog for Queen’s University students.",
         "source": "https://github.com/ChrisCooper/QcumberD",
-        "live_url": "http://qcumber.ca/"
+        "live_url": "http://qcumber.ca/",
+        "start_date": "2012-07-02T09:00:00.000Z"
     },
     {
         "name": "Quixotic-Chris.com",
@@ -25,7 +26,8 @@
         },
         "brief": "Quixotic-Chris.com is my homepage, blog, and portfolio site.",
         "source": "https://github.com/ChrisCooper/ChrisCooper.github.io",
-        "live_url": "http://www.quixotic-chris.com/"
+        "live_url": "http://www.quixotic-chris.com/",
+        "start_date": "2014-12-20T09:00:00.000Z"
     },
     {
         "name": "Chaotic Mind",
@@ -35,6 +37,17 @@
         },
         "brief": "Chaotic Mind is a top-down shooter set in a shape-shifting maze.",
         "source": "https://github.com/ChrisCooper/ChaoticMind",
-        "video": "https://www.youtube.com/watch?v=boIDvoeGzjA"
+        "video": "https://www.youtube.com/watch?v=boIDvoeGzjA",
+        "start_date": "2012-02-02T09:00:00.000Z"
+    },
+    {
+        "name": "SPQR",
+        "skills": {
+          "C": 55,
+          "Allegro": 40
+        },
+        "brief": "SPQR is a real-time strategy game inspired by Caesar III.",
+        "source": "https://github.com/ChrisCooper/SPQR",
+        "start_date": "2008-01-02T09:00:00.000Z"
     }
 ]
