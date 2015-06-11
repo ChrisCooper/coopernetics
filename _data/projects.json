@@ -10,7 +10,7 @@
           "PostgreSQL": 15,
           "jQuery": 14
         },
-        "brief": "Qcumber is a simple, accessible course catalog for Queen’s University students.",
+        "brief": "Qcumber is a simple, accessible course catalog for Queen’s University students. It has accumulated over 1,000,000 pageviews.",
         "source": "https://github.com/ChrisCooper/QcumberD",
         "live_url": "http://qcumber.ca/",
         "start_date": "2012-07-02T09:00:00.000Z"
@@ -46,8 +46,17 @@
           "C": 55,
           "Allegro": 40
         },
-        "brief": "SPQR is a real-time strategy game inspired by Caesar III.",
+        "brief": "SPQR is a real-time strategy game modeled after Caesar III. It was built as my grade 11 summative project.",
         "source": "https://github.com/ChrisCooper/SPQR",
         "start_date": "2008-01-02T09:00:00.000Z"
+    },
+    {
+        "name": "Rosalind Algorithmic Heights solvers",
+        "skills": {
+          "Scala": 65
+        },
+        "brief": "Rosalind Algorithmic Heights is a programming challenge website based around simple computer science problems.",
+        "source": "https://github.com/ChrisCooper/rosalind-algorithmic-heights",
+        "start_date": "2015-03-29T09:00:00.000Z"
     }
 ]
