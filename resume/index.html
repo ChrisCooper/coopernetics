@@ -44,9 +44,9 @@ var ProjectList = React.createClass({
             );
         });
         return (
-            <div className="projectList">
+            <ul className="ProjectList">
                 {nodes}
-            </div>
+            </ul>
         );
     }
 });
@@ -70,14 +70,21 @@ var ProjectOverview = React.createClass({
             );
         });
 
+        var image_url = "/static/images/projects/" + proj.small_image;
+
         return (
-            <div className="ProjectOverview">
+            <li className="ProjectOverview">
+                <div className="inline-tile-image-container">
+                  <a href={proj.url}>
+                    <img className="inline-tile-image" src={image_url} alt={proj.name}/>
+                  </a>
+                </div>
                 <h2 className="title">
                     <a href={proj.url}>{proj.name}</a>
                 </h2>
                 <p>{proj.brief}</p>
                 {skill_tags}
-            </div>
+            </li>
         );
     }
 });

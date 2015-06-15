@@ -13,7 +13,9 @@
         "brief": "Qcumber is a simple, accessible course catalog for Queen’s University students. It has accumulated over 1,000,000 pageviews.",
         "source": "https://github.com/ChrisCooper/QcumberD",
         "live_url": "http://qcumber.ca/",
-        "start_date": "2012-07-02T09:00:00.000Z"
+        "start_date": "2012-07-02T09:00:00.000Z",
+        "full_image": "qcumber_full.png",
+        "small_image": "qcumber_200.png"
     },
     {
         "name": "Quixotic-Chris.com",

@@ -210,11 +210,13 @@ body {
 	}
 }
 
-.blog-list-thumbnail {
+.inline-tile-image {
 	@include img-responsive(inline);
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
-.blog-thumb-container {
+.inline-tile-image-container {
 	//max-width: 140px;
 	//display: inline-block;
 	@include make-md-column(2);
