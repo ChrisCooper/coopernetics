@@ -39,6 +39,11 @@
 	}
 }
 
+.projectInfo {
+	@include make-md-column(10);
+	padding-left: 0px;
+}
+
 .skill-tag {
 	@extend .label;
 	@include label-variant($brand-primary);

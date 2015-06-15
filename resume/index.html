@@ -57,19 +57,6 @@ var ProjectOverview = React.createClass({
 
         var link_url = proj.live_url;
 
-        var skill_names = Object.keys(proj.skills);
-
-        // Sort the skills by their usage ratings
-        skill_names.sort(skillComparator(proj.skills));
-
-        var skill_tags = skill_names.map(function (skill_name) {
-          // Scale the opacity by usage rating
-          var style = {opacity: (proj.skills[skill_name]/80.0) + 0.2};
-            return (
-                <a href="#" style={style} className="skill-tag">{skill_name}</a>
-            );
-        });
-
         var image_url = "/static/images/projects/" + proj.small_image;
 
         return (
@@ -79,12 +66,39 @@ var ProjectOverview = React.createClass({
                     <img className="inline-tile-image" src={image_url} alt={proj.name}/>
                   </a>
                 </div>
-                <h2 className="title">
-                    <a href={proj.url}>{proj.name}</a>
-                </h2>
-                <p>{proj.brief}</p>
-                {skill_tags}
+                <div className="projectInfo">
+                    <h2 className="title">
+                        <a href={proj.url}>{proj.name}</a>
+                    </h2>
+                    <p>{proj.brief}</p>
+                    <SkillsList skills={proj.skills}>
+                    </SkillsList>
+                </div>
             </li>
+        );
+    }
+});
+
+var SkillsList = React.createClass({
+    render: function () {
+        var skills = this.props.skills;
+        var skill_names = Object.keys(skills);
+
+        // Sort the skills by their usage ratings
+        skill_names.sort(skillComparator(skills));
+
+        var skill_tags = skill_names.map(function (skill_name) {
+          // Scale the opacity by usage rating
+          var style = {opacity: (skills[skill_name]/80.0) + 0.2};
+            return (
+                <a href="#" style={style} className="skill-tag">{skill_name}</a>
+            );
+        });
+
+        return (
+            <div className="SkillsList">
+                {skill_tags}
+            </div>
         );
     }
 });
