@@ -29,7 +29,9 @@
         "brief": "Quixotic-Chris.com is my homepage, blog, and portfolio site.",
         "source": "https://github.com/ChrisCooper/ChrisCooper.github.io",
         "live_url": "http://www.quixotic-chris.com/",
-        "start_date": "2014-12-20T09:00:00.000Z"
+        "start_date": "2014-12-20T09:00:00.000Z",
+        "full_image": "quixotic_chris_full.png",
+        "small_image": "quixotic_chris_200.png"
     },
     {
         "name": "Chaotic Mind",

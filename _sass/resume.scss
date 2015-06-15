@@ -32,6 +32,8 @@
 	margin-bottom: 10px;
 	padding: 5px;
 
+	min-height: 170px;
+
 	.title {
 		margin-top: 10px;
 	}
@@ -41,6 +43,7 @@
 	@extend .label;
 	@include label-variant($brand-primary);
 	margin-right: 2px;
+	display: inline-block;
 }
 
 .filter-checks label {

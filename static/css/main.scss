@@ -217,8 +217,6 @@ body {
 }
 
 .inline-tile-image-container {
-	//max-width: 140px;
-	//display: inline-block;
 	@include make-md-column(2);
 	margin-bottom: 10px;
 }
