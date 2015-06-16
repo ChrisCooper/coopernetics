@@ -32,7 +32,11 @@
 	margin-bottom: 10px;
 	padding: 5px;
 
-	min-height: 170px;
+//	min-height: 170px;
+	//height: auto;
+	//overflow:hidden;
+
+	@include make-row();
 
 	.title {
 		margin-top: 10px;
@@ -42,6 +46,10 @@
 .projectInfo {
 	@include make-md-column(10);
 	padding-left: 0px;
+
+	.fa {
+		opacity: 0.5;
+	}
 }
 
 .skill-tag {

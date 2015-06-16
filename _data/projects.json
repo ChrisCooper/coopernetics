@@ -39,10 +39,12 @@
           "C#": 65,
           "XNA": 40
         },
-        "brief": "Chaotic Mind is a top-down shooter set in a shape-shifting maze.",
+        "brief": "Chaotic Mind is a top-down shooter set in a shape-shifting maze. It was inspired by the board game \"The aMAZEing Labyrinth\".",
         "source": "https://github.com/ChrisCooper/ChaoticMind",
         "video": "https://www.youtube.com/watch?v=boIDvoeGzjA",
-        "start_date": "2012-02-02T09:00:00.000Z"
+        "start_date": "2012-02-02T09:00:00.000Z",
+        "full_image": "chaotic_mind_full.png",
+        "small_image": "chaotic_mind_200.png"
     },
     {
         "name": "SPQR",
@@ -52,7 +54,9 @@
         },
         "brief": "SPQR is a real-time strategy game modeled after Caesar III. It was built as my grade 11 summative project.",
         "source": "https://github.com/ChrisCooper/SPQR",
-        "start_date": "2008-01-02T09:00:00.000Z"
+        "start_date": "2008-01-02T09:00:00.000Z",
+        "full_image": "spqr_full.png",
+        "small_image": "spqr_200.png"
     },
     {
         "name": "Rosalind Algorithmic Heights solvers",
@@ -61,6 +65,8 @@
         },
         "brief": "Rosalind Algorithmic Heights is a programming challenge website based around simple computer science problems.",
         "source": "https://github.com/ChrisCooper/rosalind-algorithmic-heights",
-        "start_date": "2015-03-29T09:00:00.000Z"
+        "start_date": "2015-03-29T09:00:00.000Z",
+        "full_image": "rosalind_full.png",
+        "small_image": "rosalind_200.png"
     }
 ]

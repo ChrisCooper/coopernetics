@@ -55,14 +55,14 @@ var ProjectOverview = React.createClass({
     render: function () {
         var proj = this.props.project;
 
-        var link_url = proj.live_url;
+        var default_url = proj.live_url;
 
         var image_url = "/static/images/projects/" + proj.small_image;
 
         return (
             <li className="ProjectOverview">
                 <div className="inline-tile-image-container">
-                  <a href={proj.url}>
+                  <a href={default_url}>
                     <img className="inline-tile-image" src={image_url} alt={proj.name}/>
                   </a>
                 </div>
@@ -71,6 +71,10 @@ var ProjectOverview = React.createClass({
                         <a href={proj.url}>{proj.name}</a>
                     </h2>
                     <p>{proj.brief}</p>
+                    <p>
+                        <a href={proj.source}><span className="fa fa-github fa-2x"></span> View source
+                        </a>
+                    </p>
                     <SkillsList skills={proj.skills}>
                     </SkillsList>
                 </div>
