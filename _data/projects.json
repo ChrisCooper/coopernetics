@@ -29,7 +29,8 @@
         "video_url": "https://www.youtube.com/watch?v=boIDvoeGzjA",
         "start_date": "2012-02-02T09:00:00.000Z",
         "full_image": "chaotic_mind_full.png",
-        "small_image": "chaotic_mind_200.png"
+        "small_image": "chaotic_mind_200.png",
+        "is_featured": true
     },
     {
         "name": "Quixotic-Chris.com",
@@ -57,7 +58,8 @@
         "source_url": "https://github.com/ChrisCooper/SPQR",
         "start_date": "2008-01-02T09:00:00.000Z",
         "full_image": "spqr_full.png",
-        "small_image": "spqr_200.png"
+        "small_image": "spqr_200.png",
+        "is_featured": true
     },
     {
         "name": "Rosalind Algorithmic Heights solvers",
