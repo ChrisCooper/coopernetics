@@ -1,0 +1,17 @@
+Name,Type,Familiarity,Depth of experience,Desire to use again,image_url
+Python,language,8,6,4,python-100-100.png
+C,language,7,5,1.5,c-100-100.png
+Objective-C,language,6.5,5,2.5,
+Perl,language,5.5,5,-1,perl-100-100.png
+SQL,language,5,4,3.5,
+C#,language,4.5,2,5,
+JavaScript,language,4,3,3,
+Java,language,3.75,4,0.5,java-100-100.png
+Scala,language,4.75,4,4,scala-100-100.png
+C++,language,3.5,3,1,cpp-100-100.png
+Haskell,language,3.25,3,5,haskell-100-100.png
+Swift,language,3,3,4,swift-100-100.png
+R,language,2.5,2,1,r-100-100.png
+PHP,language,2,3,-2,php-100-100.png
+Ruby,language,1.5,1,0.5,ruby-100-100.png
+Rust,language,1,1,3,rust-100-100.png

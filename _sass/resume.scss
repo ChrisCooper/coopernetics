@@ -1,0 +1,81 @@
+
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.dot {
+  stroke: #000;
+}
+
+.tooltip {
+  position: absolute;
+  width: 200px;
+  height: 28px;
+  pointer-events: none;
+}
+
+.ProjectList {
+	list-style-type: none;
+	padding: 0px;
+}
+
+.ProjectOverview {
+	border: 1px solid #AAAAAA;
+	box-shadow: 2px 2px 1px #AAAAAA;
+	border-radius: 5px;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+
+//	min-height: 170px;
+	//height: auto;
+	//overflow:hidden;
+
+	@include make-row();
+
+	.title {
+		margin-top: 10px;
+	}
+}
+
+.projectInfo {
+	@include make-md-column(10);
+	padding-left: 0px;
+
+	.fa {
+		opacity: 0.5;
+	}
+
+	p {
+		margin-bottom: 10px;
+	}
+}
+
+.LinksList {
+	margin-bottom: 10px;
+
+	a {
+		margin-right: 20px;
+	}
+
+	.link_text {
+		vertical-align: 25%;
+		margin-left: 3px;
+	}
+}
+
+.skill-tag {
+	@extend .label;
+	@include label-variant($brand-primary);
+	margin-right: 2px;
+	display: inline-block;
+}
+
+.filter-checks label {
+	@extend .checkbox-inline;
+}

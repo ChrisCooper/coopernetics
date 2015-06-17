@@ -1,15 +1,16 @@
 ---
 layout: titled_page
 title: Blog
+search_title70: Blog
 ---
 
 <div class="post-list-container">
 	<ul class="post-list">
 		{% for post in site.posts %}
 		<li>
-			<div class="blog-thumb-container">
+			<div class="inline-tile-image-container">
 				<a href="{{ post.url }}">
-					<img src="{{ post.main_square_image_url }}" alt="{{ post.main_square_image_alt }}" class="blog-list-thumbnail"/>
+					<img src="{{ post.main_square_image_url }}" alt="{{ post.main_square_image_alt }}" class="inline-tile-image"/>
 				</a>
 			</div>
 			<div class="blog-title-container">

@@ -1,0 +1,15 @@
+Name,Type,Familiarity,Depth of experience,Desire to use again
+C,language,6,5,2
+C#,language,4,2,4
+C++,language,3,3,2
+Haskell,language,3,3,4
+Java,language,3,4,1
+JavaScript,language,4,3,2
+Objective-C,language,6,5,2
+Perl,language,5,5,-3
+PHP,language,3,3,-3
+Python,language,7,6,4
+R,language,3,2,1
+Scala,language,4,4,4
+Swift,language,3,3,4
+SQL,language,4,4,3

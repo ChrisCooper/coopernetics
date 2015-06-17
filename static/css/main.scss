@@ -210,13 +210,13 @@ body {
 	}
 }
 
-.blog-list-thumbnail {
+.inline-tile-image {
 	@include img-responsive(inline);
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
-.blog-thumb-container {
-	//max-width: 140px;
-	//display: inline-block;
+.inline-tile-image-container {
 	@include make-md-column(2);
 	margin-bottom: 10px;
 }
@@ -232,3 +232,5 @@ body {
 		color: $faded-text;
 	}
 }
+
+@import "resume";
