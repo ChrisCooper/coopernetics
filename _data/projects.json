@@ -15,6 +15,7 @@
         "live_url": "http://qcumber.ca/",
         "blog_post_url": "/2015/03/26/qcumber-queens-course-catalogue-retrospective.html",
         "start_date": "2012-07-02T09:00:00.000Z",
+        "preformated_start_date": "July 2012",
         "full_image": "qcumber_full.png",
         "small_image": "qcumber_200.png"
     },
@@ -28,6 +29,7 @@
         "source_url": "https://github.com/ChrisCooper/ChaoticMind",
         "video_url": "https://www.youtube.com/watch?v=boIDvoeGzjA",
         "start_date": "2012-02-02T09:00:00.000Z",
+        "preformated_start_date": "February 2012",
         "full_image": "chaotic_mind_full.png",
         "small_image": "chaotic_mind_200.png",
         "is_featured": true
@@ -45,6 +47,7 @@
         "source_url": "https://github.com/ChrisCooper/ChrisCooper.github.io",
         "live_url": "http://www.quixotic-chris.com/",
         "start_date": "2014-12-20T09:00:00.000Z",
+        "preformated_start_date": "December 2014",
         "full_image": "quixotic_chris_full.png",
         "small_image": "quixotic_chris_200.png"
     },
@@ -57,6 +60,7 @@
         "brief": "SPQR is a real-time strategy game modeled after Caesar III. It was built as my grade 11 summative project.",
         "source_url": "https://github.com/ChrisCooper/SPQR",
         "start_date": "2008-01-02T09:00:00.000Z",
+        "preformated_start_date": "January 2008",
         "full_image": "spqr_full.png",
         "small_image": "spqr_200.png",
         "is_featured": true
@@ -69,6 +73,7 @@
         "brief": "Rosalind Algorithmic Heights is a programming challenge website based around simple computer science problems.",
         "source_url": "https://github.com/ChrisCooper/rosalind-algorithmic-heights",
         "start_date": "2015-03-29T09:00:00.000Z",
+        "preformated_start_date": "March 2015",
         "full_image": "rosalind_full.png",
         "small_image": "rosalind_200.png"
     }

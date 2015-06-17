@@ -81,6 +81,7 @@ var ProjectOverview = React.createClass({
                 <div className="projectInfo">
                     <h2 className="title">
                         <a href={default_url}>{proj.name}</a>
+                        <span className="start-date">{ proj.preformated_start_date }</span>
                     </h2>
                     <p>{proj.brief}</p>
                     <LinksList project={proj}></LinksList>

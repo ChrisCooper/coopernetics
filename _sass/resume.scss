@@ -47,6 +47,13 @@
 	@include make-md-column(10);
 	padding-left: 0px;
 
+	.start-date {
+		margin-left: 10px;
+		font-weight: 300;
+    	font-size: 18px;
+		color: $faded-text;
+	}
+
 	.fa {
 		opacity: 0.5;
 	}
