@@ -91,6 +91,7 @@ var LinksList = React.createClass({
       {text: "Blog post", url_attribute: "blog_post_url", icon_class: "fa-pencil"}
     ],
     render: function () {
+      
         var proj = this.props.project;
         var links = this.link_infos.map(function (link_info) {
             var style_class = "fa " + link_info.icon_class + " fa-2x";
@@ -125,7 +126,9 @@ var SkillsList = React.createClass({
           // Scale the opacity by usage rating
           var style = {opacity: (skills[skill_name]/80.0) + 0.2};
             return (
-                <a href="#" style={style} className="skill-tag">{skill_name}</a>
+                //<a href="#">
+                  <span className="skill-tag" style={style}>{skill_name}</span>
+                //</a>
             );
         });
 
