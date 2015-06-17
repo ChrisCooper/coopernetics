@@ -1,25 +1,29 @@
 ---
 layout: titled_page
-title: Projects and Skills
+title: Selected Projects
 search_title70: Resume
 extra_css:
     - languages.css
 ---
 
+<!-- 
 <div class="filterContainer">
-  <input class="filter" type="text" placeholder="e.g. 'Python' or 'Qcumber'">
-  <span class="filter-checks">
-    <label>
-      <input type="checkbox" id="checkLangs" value="langs" checked> Languages
-    </label>
-    <label>
-      <input type="checkbox" id="checkLibs" value="libs" checked> Libraries &amp; Frameworks
-    </label>
-    <label>
-      <input type="checkbox" id="checkOther" value="other" checked> Other
-    </label>
-  </span>
+    <input class="filter" type="text" placeholder="e.g. 'Python' or 'Qcumber'">
+    <span class="filter-checks">
+        <label>
+            <input type="checkbox" id="checkLangs" value="langs" checked> Languages
+        </label>
+        <label>
+            <input type="checkbox" id="checkLibs" value="libs" checked> Libraries &amp; Frameworks
+        </label>
+        <label>
+            <input type="checkbox" id="checkOther" value="other" checked> Other
+        </label>
+    </span>
 </div>
+ -->
+
+<p>Full list available on <a href="https://github.com/ChrisCooper">Github</a></p>
 
 <div id="projects-list">
 </div>
@@ -71,14 +75,40 @@ var ProjectOverview = React.createClass({
                         <a href={proj.url}>{proj.name}</a>
                     </h2>
                     <p>{proj.brief}</p>
-                    <p>
-                        <a href={proj.source}><span className="fa fa-github fa-2x"></span> View source
-                        </a>
-                    </p>
-                    <SkillsList skills={proj.skills}>
-                    </SkillsList>
+                    <LinksList project={proj}></LinksList>
+                    <SkillsList skills={proj.skills}></SkillsList>
                 </div>
             </li>
+        );
+    }
+});
+
+var LinksList = React.createClass({
+      link_infos: [
+      {text: "Source", url_attribute: "source", icon_class: "fa-github"},
+      {text: "Video", url_attribute: "video_url", icon_class: "fa-youtube-play"},
+      {text: "Live", url_attribute: "live_url", icon_class: "fa-plane"},
+      {text: "Blog post", url_attribute: "blog_post_url", icon_class: "fa-pencil"}
+    ],
+    render: function () {
+        var proj = this.props.project;
+        var links = this.link_infos.map(function (link_info) {
+            var style_class = "fa " + link_info.icon_class + " fa-2x";
+            if (! proj[link_info.url_attribute]) {
+                return;
+            }
+            return (
+                <a href={proj[link_info.url_attribute]}>
+                    <span className={style_class}></span>
+                    <span className="link_text">{link_info.text}</span>
+                </a>
+            );
+        });
+
+        return (
+            <div className="LinksList">
+                {links}
+            </div>
         );
     }
 });

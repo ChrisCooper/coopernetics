@@ -50,6 +50,23 @@
 	.fa {
 		opacity: 0.5;
 	}
+
+	p {
+		margin-bottom: 10px;
+	}
+}
+
+.LinksList {
+	margin-bottom: 10px;
+
+	a {
+		margin-right: 20px;
+	}
+
+	.link_text {
+		vertical-align: 25%;
+		margin-left: 3px;
+	}
 }
 
 .skill-tag {
