@@ -56,10 +56,18 @@ var ProjectList = React.createClass({
 });
 
 var ProjectOverview = React.createClass({
+    url_attributes: ["blog_post_url", "video_url", "live_url", "source_url"],
     render: function () {
         var proj = this.props.project;
 
-        var default_url = proj.live_url;
+        // Take the first url that the project has defined
+        var default_url;
+        var i = 0;
+        while (! default_url && i < this.url_attributes.length) {
+            console.log(proj[this.url_attributes[i]]);
+            default_url = proj[this.url_attributes[i]];
+            i++;
+        }
 
         var image_url = "/static/images/projects/" + proj.small_image;
 
@@ -72,7 +80,7 @@ var ProjectOverview = React.createClass({
                 </div>
                 <div className="projectInfo">
                     <h2 className="title">
-                        <a href={proj.url}>{proj.name}</a>
+                        <a href={default_url}>{proj.name}</a>
                     </h2>
                     <p>{proj.brief}</p>
                     <LinksList project={proj}></LinksList>
@@ -85,13 +93,13 @@ var ProjectOverview = React.createClass({
 
 var LinksList = React.createClass({
       link_infos: [
-      {text: "Source", url_attribute: "source", icon_class: "fa-github"},
+      {text: "Source", url_attribute: "source_url", icon_class: "fa-github"},
       {text: "Video", url_attribute: "video_url", icon_class: "fa-youtube-play"},
       {text: "Live", url_attribute: "live_url", icon_class: "fa-plane"},
       {text: "Blog post", url_attribute: "blog_post_url", icon_class: "fa-pencil"}
     ],
     render: function () {
-      
+
         var proj = this.props.project;
         var links = this.link_infos.map(function (link_info) {
             var style_class = "fa " + link_info.icon_class + " fa-2x";
