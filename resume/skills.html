@@ -45,6 +45,12 @@ var yValue = function(d) { return d[yProperty];}, // data -> value
     yMap = function(d) { return yScale(yValue(d));}, // data -> display
     yAxis = d3.svg.axis().scale(yScale).orient("left");
 
+var zProperty = "Depth of experience";
+var zValue = function(d) { return d[zProperty];}; // data -> value
+var zScale = d3.scale.linear().range([0.25, 1]); // value -> display
+var zMap = function(d) { return zScale(zValue(d));}; // data -> display
+
+
 // setup fill color
 var cValue = function(d) { return d.Type;},
     color = d3.scale.category10();
@@ -74,6 +80,7 @@ d3.csv("/static/data/languages.csv", function(error, data) {
   // don't want dots overlapping axis, so add in buffer to data domain
   xScale.domain([d3.min(data, xValue)-1, d3.max(data, xValue)+1]);
   yScale.domain([d3.min(data, yValue)-1, d3.max(data, yValue)+1]);
+  zScale.domain([d3.min(data, zValue), d3.max(data, zValue)]);
 
   // x-axis
   svg.append("g")
@@ -106,8 +113,8 @@ d3.csv("/static/data/languages.csv", function(error, data) {
   	.attr("width", "100px")
   	.attr("height", "50px")
 
-  // draw dots
-  svg.selectAll(".dot")
+  // draw images
+/*  svg.selectAll(".dot")
       .data(data)
     .enter().append("image")
       .attr("class", "dot")
@@ -130,6 +137,19 @@ d3.csv("/static/data/languages.csv", function(error, data) {
                .duration(500)
                .style("opacity", 0);
       });
+*/
+  // Draw labels
+  svg.selectAll('.dot')
+      .data(data)
+    .enter().append('text').text(function(d) {return d.Name;})
+      .attr('x', xMap)
+      .attr('y', yMap)
+      .attr('fill', 'black')
+      .attr('fill-opacity', zMap)
+      .attr('text-anchor', 'middle')
+      .attr('font-weight', 'bold')
+      //font-family="sans-serif"
+      //font-size="20px"
 
   // draw legend
   var legend = svg.selectAll(".legend")
