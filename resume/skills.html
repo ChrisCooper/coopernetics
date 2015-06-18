@@ -12,7 +12,6 @@ var margin = {top: 20, left: 20, bottom: 30, right: 10};
 var container = d3.select('div.wrapper');
 var container_full_width = parseInt(container.style('width'));
 var full_width = container_full_width - parseInt(container.style('margin-left')) - parseInt(container.style('padding-right'));
-console.log(container.style('padding-right'));
 var width = full_width - margin.left - margin.right;
 var aspectRatio = 1.9;
 
@@ -29,26 +28,40 @@ var height = width / aspectRatio;
 
 var image_root = "/static/images/logos/";
 
-// setup x
-//var xProperty = "Desire to use again";
-var xProperty = "Familiarity";
-var xValue = function(d) { return d[xProperty];}, // data -> value
-    xScale = d3.scale.linear().range([0, width]), // value -> display
-    xMap = function(d) { return xScale(xValue(d));}, // data -> display
-    xAxis = d3.svg.axis().scale(xScale).orient("bottom");
+var xSet = {
+  propertyName: "Familiarity",
+  rangeMin: 0,
+  rangeMax: width,
+  domainBuffer: 1,
+  axisOrient: "bottom"
+}
 
-// setup y
-//var yProperty = "Familiarity";
-var yProperty = "Desire to use again";
-var yValue = function(d) { return d[yProperty];}, // data -> value
-    yScale = d3.scale.linear().range([height, 0]), // value -> display
-    yMap = function(d) { return yScale(yValue(d));}, // data -> display
-    yAxis = d3.svg.axis().scale(yScale).orient("left");
+var ySet = {
+  propertyName: "Desire to use again",
+  rangeMin: height,
+  rangeMax: 0,
+  domainBuffer: 1,
+  axisOrient: "left"
+}
 
-var zProperty = "Depth of experience";
-var zValue = function(d) { return d[zProperty];}; // data -> value
-var zScale = d3.scale.linear().range([0.25, 1]); // value -> display
-var zMap = function(d) { return zScale(zValue(d));}; // data -> display
+var zSet = {
+  propertyName: "Depth of experience",
+  rangeMin: 0.25,
+  rangeMax: 1,
+  domainBuffer: 0,
+}
+
+
+// Make helper functions for each axis 
+$.each([xSet, ySet, zSet], function(index, set) {
+    set.getValue = function(d) { return d[set.propertyName];}; // data -> value
+    set.scale = d3.scale.linear().range([set.rangeMin, set.rangeMax]); // data -> value
+    set.mapper = function(d) { return set.scale(set.getValue(d));}; // data -> display
+
+    if (set.axisOrient) {
+      set.axis = d3.svg.axis().scale(set.scale).orient(set.axisOrient);
+    }
+});
 
 
 // setup fill color
@@ -73,38 +86,39 @@ d3.csv("/static/data/languages.csv", function(error, data) {
 
   // change string (from CSV) into number format
   data.forEach(function(d) {
-    d[xProperty] = +d[xProperty];
-    d[yProperty] = +d[yProperty];	
+    d[xSet.propertyName] = +d[xSet.propertyName];
+    d[ySet.propertyName] = +d[ySet.propertyName];
+    d[zSet.propertyName] = +d[zSet.propertyName]; 
   });
 
-  // don't want dots overlapping axis, so add in buffer to data domain
-  xScale.domain([d3.min(data, xValue)-1, d3.max(data, xValue)+1]);
-  yScale.domain([d3.min(data, yValue)-1, d3.max(data, yValue)+1]);
-  zScale.domain([d3.min(data, zValue), d3.max(data, zValue)]);
-
+  // Scale domains
+  $.each([xSet, ySet, zSet], function(index, set) {
+      set.scale.domain([d3.min(data, set.getValue) - set.domainBuffer, d3.max(data, set.getValue) + set.domainBuffer]);
+  });
+ 
   // x-axis
   svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
-      .call(xAxis)
+      .call(xSet.axis)
     .append("text")
       .attr("class", "label")
       .attr("x", width)
       .attr("y", -6)
       .style("text-anchor", "end")
-      .text(xProperty);
+      .text(xSet.propertyName);
 
   // y-axis
   svg.append("g")
       .attr("class", "y axis")
-      .call(yAxis)
+      .call(ySet.axis)
     .append("text")
       .attr("class", "label")
       .attr("transform", "rotate(-90)")
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text(yProperty);
+      .text(ySet.propertyName);
 
   svg.append("image")
   	
@@ -142,10 +156,10 @@ d3.csv("/static/data/languages.csv", function(error, data) {
   svg.selectAll('.dot')
       .data(data)
     .enter().append('text').text(function(d) {return d.Name;})
-      .attr('x', xMap)
-      .attr('y', yMap)
+      .attr('x', xSet.mapper)
+      .attr('y', ySet.mapper)
       .attr('fill', 'black')
-      .attr('fill-opacity', zMap)
+      .attr('fill-opacity', zSet.mapper)
       .attr('text-anchor', 'middle')
       .attr('font-weight', 'bold')
       //font-family="sans-serif"
