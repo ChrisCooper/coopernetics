@@ -8,26 +8,21 @@ extra_css:
 
 <script>
 
-var margin = {top: 20, left: 20, bottom: 30, right: 10};
+
+/*** Constants ***/
+var margin = {top: 20, left: 30, bottom: 30, right: 10};
+var aspectRatio = 1.5;
+var image_root = "/static/images/logos/";
+
+
+/*** Calculate frame ***/
 var container = d3.select('div.wrapper');
 var container_full_width = parseInt(container.style('width'));
 var full_width = container_full_width - parseInt(container.style('margin-left')) - parseInt(container.style('padding-right'));
 var width = full_width - margin.left - margin.right;
-var aspectRatio = 1.9;
-
-/** Width-dependant variables **/
-var logo_width = width / 16;
 var height = width / aspectRatio;
 
-/* 
- * value accessor - returns the value to encode for a given data object.
- * scale - maps value to a visual display encoding, such as a pixel position.
- * map function - maps from data value to display value
- * axis - sets up axis
- */ 
-
-var image_root = "/static/images/logos/";
-
+/*** Axis information ***/
 var xSet = {
   propertyName: "Familiarity",
   rangeMin: 0,
@@ -35,7 +30,6 @@ var xSet = {
   domainBuffer: 1,
   axisOrient: "bottom"
 }
-
 var ySet = {
   propertyName: "Desire to use again",
   rangeMin: height,
@@ -43,14 +37,12 @@ var ySet = {
   domainBuffer: 1,
   axisOrient: "left"
 }
-
 var zSet = {
   propertyName: "Depth of experience",
   rangeMin: 0.25,
   rangeMax: 1,
   domainBuffer: 0,
 }
-
 
 // Make helper functions for each axis 
 $.each([xSet, ySet, zSet], function(index, set) {
@@ -63,23 +55,13 @@ $.each([xSet, ySet, zSet], function(index, set) {
     }
 });
 
-
-// setup fill color
-var cValue = function(d) { return d.Type;},
-    color = d3.scale.category10();
-
-// add the graph canvas to the body of the webpage
+/*** Add SVG to page ***/
 var svg = d3.select("div.wrapper").append("svg")
 	.attr("id", "languages-graph")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-// add the tooltip area to the webpage
-var tooltip = d3.select("body").append("div")
-    .attr("class", "tooltip")
-    .style("opacity", 0);
 
 // load data
 d3.csv("/static/data/languages.csv", function(error, data) {
@@ -120,50 +102,16 @@ d3.csv("/static/data/languages.csv", function(error, data) {
       .style("text-anchor", "end")
       .text(ySet.propertyName);
 
-  svg.append("image")
-  	
-  	.attr("cx", 50)
-  	.attr("cy", 0)
-  	.attr("width", "100px")
-  	.attr("height", "50px")
 
-  // draw images
-/*  svg.selectAll(".dot")
-      .data(data)
-    .enter().append("image")
-      .attr("class", "dot")
-      .attr("x", xMap)
-      .attr("y", yMap)
-      .attr("xlink:href", function(d) { return image_root + d.image_url;})
-      .attr("width", logo_width+"px")
-      .attr("height", logo_width+"px")
-      .on("mouseover", function(d) {
-          tooltip.transition()
-               .duration(200)
-               .style("opacity", .9);
-          tooltip.html(d.Name + "<br/> (" + xValue(d) 
-	        + ", " + yValue(d) + ")")
-               .style("left", (d3.event.pageX + 5) + "px")
-               .style("top", (d3.event.pageY - 28) + "px");
-      })
-      .on("mouseout", function(d) {
-          tooltip.transition()
-               .duration(500)
-               .style("opacity", 0);
-      });
-*/
   // Draw labels
   svg.selectAll('.dot')
       .data(data)
     .enter().append('text').text(function(d) {return d.Name;})
       .attr('x', xSet.mapper)
       .attr('y', ySet.mapper)
-      .attr('fill', 'black')
-      .attr('fill-opacity', zSet.mapper)
       .attr('text-anchor', 'middle')
-      .attr('font-weight', 'bold')
-      //font-family="sans-serif"
-      //font-size="20px"
+      .attr("class", "language-name")
+      .attr('fill-opacity', zSet.mapper);
 
   // draw legend
   var legend = svg.selectAll(".legend")

@@ -86,3 +86,12 @@
 .filter-checks label {
 	@extend .checkbox-inline;
 }
+
+
+
+/** Graphs **/
+.language-name {
+	font-weight: bold;
+	fill: black;
+	font-family: serif;
+}
