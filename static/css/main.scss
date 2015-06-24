@@ -30,6 +30,8 @@ $navbar-default-link-color: #555;
 
 @mixin blue-background() {
 	background: $background-blue url('/static/images/noisy-texture2-400x400.png') repeat scroll left top;
+	//background-color: white;
+	//background-color: #555;
 }
 
 /*
@@ -80,7 +82,8 @@ body {
 
 .navbar {
 	margin-top: 10px;
-	//background-color: white;
+	width: 100%;
+	background-color: white;
 }
 
 .navbar-nav {
@@ -98,7 +101,8 @@ body {
 
 	li {
 
-		background: white url('/static/images/noisy-texture-200x200.png') repeat scroll left top;
+		//background: white url('/static/images/noisy-texture-200x200.png') repeat scroll left top;
+		background-color: white;
 		
 		padding: 15px;
 		margin-bottom: 15px;
@@ -161,7 +165,7 @@ body {
 	margin-left: 8%;
 	margin-right: 8%;
 
-	&:hover: {
+	&:hover {
 		text-decoration: none;
 	}
 }
