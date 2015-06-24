@@ -29,9 +29,7 @@ $navbar-default-link-color: #555;
 @import "pygments-scheme";
 
 @mixin blue-background() {
-	background: $background-blue url('/static/images/noisy-texture2-400x400.png') repeat scroll left top;
-	//background-color: white;
-	//background-color: #555;
+	background: darken($background-blue, 25%) url('/static/images/noisy-texture2-400x400.png') repeat scroll left top;
 }
 
 /*
@@ -89,20 +87,15 @@ body {
 .navbar-nav {
 	font-size: 32px;
 	font-weight: 500;
-	color: red;
 }
 
 .tile-list {
 
-	margin: 15px;
 	padding: 0px;
 
 	list-style-type: none;
 
-
 	li {
-
-		//background: white url('/static/images/noisy-texture-200x200.png') repeat scroll left top;
 		background-color: white;
 		
 		padding: 15px;
@@ -152,7 +145,6 @@ body {
 
 	font-size: 25px;
 	font-weight: 400;
-
 }
 
 .showcase-link {
