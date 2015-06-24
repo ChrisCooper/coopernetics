@@ -25,8 +25,13 @@ permalink: /
 	
 	<li id="blog">
 		<div class="tile-header">
-			<a href="/blog" class="title">Blog</a> - Thoughts and tutorials on programming, and related disciplines.
+			<a href="/blog" class="title">Blog</a>
 		</div>
+		<div class="tile-content">
+			<div class="single-item">
+				<p>These are my thoughts and tutorials on programming, and related disciplines.</p>
+			</div>
+		<div>
 		<div class="tile-content">
 			{% for post in site.posts limit 2 %}
 				{% if post.is_featured %}
@@ -43,8 +48,13 @@ permalink: /
 
 	<li id="projects">
 		<div class="tile-header">
-			<a href="/projects" class="title">Projects</a> - I make games, websites, and unclassified other things.
+			<a href="/projects" class="title">Projects</a>
 		</div>
+		<div class="tile-content">
+			<div class="single-item">
+				<p>I make games, websites, and unclassified other things.</p>
+			</div>
+		<div>
 
 		<div class="tile-content">
 			{% for proj in site.data.projects limit 3 %}
