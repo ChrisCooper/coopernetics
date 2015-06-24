@@ -3,7 +3,7 @@
 ---
 
 
-$background-blue: lighten(#1D86FF, 10%);
+//$background-blue: lighten(#1D86FF, 10%);
 $background-blue: lighten(#268FE0, 10%);
 
 $faded-text: #A0A0A0;
@@ -89,6 +89,7 @@ body {
 .navbar-nav {
 	font-size: 32px;
 	font-weight: 500;
+	color: red;
 }
 
 .tile-list {
@@ -114,6 +115,8 @@ body {
 }	
 
 .tile-header {
+
+	margin-bottom: 7px;
 
 	.title {
 		font-size: 31px;
