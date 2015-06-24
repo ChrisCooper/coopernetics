@@ -76,5 +76,39 @@
         "preformated_start_date": "March 2015",
         "full_image": "rosalind_full.png",
         "small_image": "rosalind_200.png"
+    },
+    {
+        "name": "Haskell Raytracer",
+        "skills": {
+          "Haskell": 55
+        },
+        "brief": "I think raytracers are a great project for learning a language, so this was my project to learn some Haskell!",
+        "source_url": "https://github.com/ChrisCooper/HaskellRaytracer",
+        "start_date": "2014-10-24T09:00:00.000Z",
+        "preformated_start_date": "September 2014",
+        "full_image": "haskell_raytracer_full.png",
+        "small_image": "haskell_raytracer_200.png"
+    },
+    {
+        "name": "OpenGL Tanks",
+        "skills": {
+          "C++": 45,
+          "OpenGL": 45
+        },
+        "brief": "This was my first project in 3D, using OpenGL's fixed function pipeline. Building the enemy AI was probably the most fun part.",
+        "source_url": "https://github.com/ChrisCooper/GL_Tanks",
+        "start_date": "2010-10-07T09:00:00.000Z",
+        "preformated_start_date": "September 2010"
+    },
+    {
+        "name": "Flight Path",
+        "skills": {
+          "C": 35,
+          "Allegro": 35
+        },
+        "brief": "This was a silly sidescrolling shooter to flex my gameplay muscles in high school.",
+        "source_url": "https://github.com/ChrisCooper/Flight-Path",
+        "start_date": "2009-02-15T09:00:00.000Z",
+        "preformated_start_date": "February 2009"
     }
 ]

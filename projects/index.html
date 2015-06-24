@@ -64,18 +64,22 @@ var ProjectOverview = React.createClass({
         var default_url;
         var i = 0;
         while (! default_url && i < this.url_attributes.length) {
-            console.log(proj[this.url_attributes[i]]);
             default_url = proj[this.url_attributes[i]];
             i++;
         }
 
-        var image_url = "/static/images/projects/" + proj.small_image;
+        var image_url = ""
+        var image_alt = "";
+        if (proj.small_image) {
+            image_url = "/static/images/projects/" + proj.small_image;
+            image_alt = proj.name + "screenshot";
+        }
 
         return (
             <li className="ProjectOverview">
                 <div className="inline-tile-image-container">
                   <a href={default_url}>
-                    <img className="inline-tile-image" src={image_url} alt={proj.name}/>
+                    <img className="inline-tile-image" src={image_url} alt={image_alt}/>
                   </a>
                 </div>
                 <div className="projectInfo">
