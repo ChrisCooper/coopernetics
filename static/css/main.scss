@@ -29,7 +29,7 @@ $navbar-default-link-color: #555;
 @import "pygments-scheme";
 
 @mixin blue-background() {
-	background: darken($background-blue, 25%) url('/static/images/noisy-texture2-400x400.png') repeat scroll left top;
+	background: $background-blue url('/static/images/noisy-texture2-400x400.png') repeat scroll left top;
 }
 
 /*
