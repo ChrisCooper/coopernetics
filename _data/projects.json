@@ -70,8 +70,9 @@
         "skills": {
           "Scala": 65
         },
-        "brief": "Rosalind Algorithmic Heights is a programming challenge website based around simple computer science problems.",
+        "brief": "Rosalind Algorithmic Heights is a programming challenge website based around simple computer science problems. I've built some solutions in Scala!",
         "source_url": "https://github.com/ChrisCooper/rosalind-algorithmic-heights",
+        "live_url": "http://rosalind.info/users/chriscooper/",
         "start_date": "2015-03-29T09:00:00.000Z",
         "preformated_start_date": "March 2015",
         "full_image": "rosalind_full.png",
