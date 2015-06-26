@@ -98,7 +98,9 @@
         "brief": "This was my first project in 3D, using OpenGL's fixed function pipeline. Building the enemy AI was probably the most fun part.",
         "source_url": "https://github.com/ChrisCooper/GL_Tanks",
         "start_date": "2010-10-07T09:00:00.000Z",
-        "preformated_start_date": "September 2010"
+        "preformated_start_date": "September 2010",
+        "full_image": "gl_tanks_full.png",
+        "small_image": "gl_tanks_200.png"
     },
     {
         "name": "Flight Path",
