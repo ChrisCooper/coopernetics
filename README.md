@@ -1,4 +1,4 @@
-ChrisCooper.github.io
+Coopernetics
 =====================
 
-Account repo
+Personal site
